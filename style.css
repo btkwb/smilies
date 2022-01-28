@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Sans+Pro:ital,wght@1,300&display=swap');
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.main{
+  height: 100vh;
+  width: 100%;
+  background: #E1E5E8;
+  display: grid;
+  place-items: center;
+}
+
+
+.card{
+  height: 340px;
+  width: 500px;
+  background: #E3E4E8;
+  box-shadow: 5px 4px 8px #BDC2C6;
+  padding: 25px 60px;
+  border-radius: 10px;
+  position: relative;
+  transition: all .3s linear;
+}
+
+.card:hover{
+  height: 480px;
+}
+
+.card::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: -4px -5px 8px #F1F2F3;
+}
+
+.card:hover > .txt-box{
+  transform: translateY(-250px);
+  opacity: 1;
+}
+
+.img-box{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transform: translateY(-90px);
+  z-index: 1;
+}
+
+.img-box img{
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 3px 3px 8px #505050;
+}
+
+.txt-box{
+  padding: 15px 25px;
+  text-align: center;
+  transform: translateY(-260px);
+  transition: all .3s;
+  opacity: 0;
+}
+
+.txt-box span{
+  color: #FF0C83;
+  font-weight: 600;
+}
+
+.txt-box h2{
+  color: #576476;
+  margin-bottom: 30px;
+  font-size: 34px;
+}
+
+.txt-box p{
+  color: #2e272e;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 800px) {
+  .card{
+    height: 200px;
+    width: 300px;
+    padding: 10px 20px;
+  }
+  
+  .img-box{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transform: translateY(-50px);
+ }
+ .card:hover{
+   height: 320px;
+ }
+ .txt-box h2{
+   font-size: 20px;
+   margin-bottom: 10px;
+ }
+ .txt-box p{
+   font-size: 12px;
+ }
+ .card:hover > .txt-box{
+  transform: translateY(-175px);
+  opacity: 1;
+ }
+.txt-box span{
+  color: #FF0C83;
+  font-weight: 600;
+ }
+
+}
